@@ -41,10 +41,6 @@ public class VideoPreviewActivity extends FilePreviewActivity {
     @Override
     public void bindEvent() {
         super.bindEvent();
-//        binding.coverContainer.setOnClickListener(v -> {
-//            binding.coverContainer.setVisibility(View.GONE);
-//            binding.jzVideo.startVideo();
-//        });
     }
 
     @Override

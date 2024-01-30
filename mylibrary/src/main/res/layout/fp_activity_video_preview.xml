@@ -12,26 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-<!--    <FrameLayout-->
-<!--        android:id="@+id/coverContainer"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toTopOf="@id/jzVideo"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/jzVideo">-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/ivCover"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:scaleType="centerCrop"/>-->
-
-<!--        <ImageView-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/jz_play_normal"/>-->
-<!--    </FrameLayout>-->
-
     <androidx.appcompat.widget.Toolbar
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/toolBar"
