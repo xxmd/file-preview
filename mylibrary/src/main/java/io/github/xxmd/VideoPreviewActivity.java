@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.PersistableBundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 
 import androidx.appcompat.widget.Toolbar;
@@ -32,15 +33,24 @@ public class VideoPreviewActivity extends FilePreviewActivity {
     @Override
     public void initView() {
         super.initView();
-
-        Uri uri = Uri.parse("http://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4");
-        JZDataSource jzDataSource = new JZDataSource("http://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4", "");
+        loadCover();
+        JZDataSource jzDataSource = new JZDataSource(filePath, "");
         binding.jzVideo.setUp(jzDataSource, JzvdStd.SCREEN_NORMAL);
     }
 
     @Override
     public void bindEvent() {
         super.bindEvent();
+//        binding.coverContainer.setOnClickListener(v -> {
+//            binding.coverContainer.setVisibility(View.GONE);
+//            binding.jzVideo.startVideo();
+//        });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        binding.jzVideo.releaseAllVideos();
     }
 
     @Override
@@ -60,9 +70,10 @@ public class VideoPreviewActivity extends FilePreviewActivity {
     }
 
     private void loadCover() {
-//        Glide.with(binding.ivCover)
-//                .load(filePath)
-//                .placeholder(R.drawable.image_placeholder)
-//                .into(binding.ivCover);
+        binding.jzVideo.posterImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        Glide.with(this)
+                .load(filePath)
+                .placeholder(R.drawable.image_placeholder)
+                .into(binding.jzVideo.posterImageView);
     }
 }
