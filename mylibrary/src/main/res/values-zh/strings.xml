@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">library-base</string>
+    <string name="image_preview">图片预览</string>
+    <string name="video_preview">视频预览</string>
+    <string name="audio_preview">音频预览</string>
+    <string name="file_preview">文件预览</string>
+
+</resources>

@@ -62,7 +62,7 @@ public class VideoPreviewActivity extends FilePreviewActivity {
 
     @Override
     public String getPageTitle() {
-        return "视频预览";
+        return getString(R.string.video_preview);
     }
 
     private void loadCover() {

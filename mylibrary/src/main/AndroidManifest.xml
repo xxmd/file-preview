@@ -6,5 +6,6 @@
         <activity android:name=".ImagePreviewActivity" />
         <activity android:name=".VideoPreviewActivity" />
         <activity android:name=".AudioPreviewActivity" />
+        <activity android:name=".WebPreviewActivity" />
     </application>
 </manifest>

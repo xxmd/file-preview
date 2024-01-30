@@ -107,7 +107,7 @@ public class AudioPreviewActivity extends FilePreviewActivity {
 
     @Override
     public String getPageTitle() {
-        return "音频预览";
+        return getString(R.string.audio_preview);
     }
 
     private void seekTo(int gap) {
