@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/black"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
 
-    <cn.jzvd.JzvdStd
+    <cn.jzvd.JZVideoPlayerStandard
         android:id="@+id/jzVideo"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <androidx.appcompat.widget.Toolbar
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/toolBar"
-        app:titleTextColor="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

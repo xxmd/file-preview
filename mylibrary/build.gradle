@@ -47,7 +47,8 @@ dependencies {
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
     implementation 'com.jaeger.statusbarutil:library:1.5.1'
-    implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
+    // 不用这个 6.2.12 的版本放视频一直转圈
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
 }
 
 afterEvaluate {
@@ -59,7 +60,7 @@ afterEvaluate {
 ext {
     publishedGroupId = 'io.github.xxmd'
     artifact = rootProject.name
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
     libraryDescription = 'File preview in android device'
     siteUrl = 'https://github.com/xxmd/' + rootProject.name
 }
